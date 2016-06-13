@@ -6,7 +6,6 @@ import Main from './layout/Main';
 function mapStateToProps(state) {
     
     return {
-        forms: state.forms,
         charts: state.charts
         
     }
