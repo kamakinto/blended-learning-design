@@ -1,0 +1,48 @@
+/**
+ * Created by everettrobinson on 6/10/16.
+ */
+import React from 'react';
+var chart = require('chart.js');
+var RadarChart = require("react-chartjs").Radar;
+var BarChart = require("react-chartjs").Bar;
+
+
+
+const SpiderGraph = React.createClass({
+
+    componentWillReceiveProps: function(nextProps) {
+        console.log(nextProps);
+
+    },
+
+    render() {
+
+
+        return (
+            <div>
+                <div className="row">
+                    <div className="col-md-6">
+
+                            <RadarChart data={this.props.charts.radar} options={null}  width="300" height="250" />
+                        </div>
+
+
+                        <div className="col-md-6">
+                            <BarChart data={this.props.charts.bar} options={null}  width="300" height="250" />
+                        </div>
+                    </div>
+                 <pre>
+                    {JSON.stringify(this.props.charts.radar)}
+                     </pre>
+                </div>
+
+        )
+
+    }
+
+
+
+
+});
+
+export default SpiderGraph;
