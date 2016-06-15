@@ -18,21 +18,27 @@ var update = require('react-addons-update');
 function charts(state = [], action) {
 
         switch(action.type) {
-            case 'UPDATE_RADAR' :
-                    var radardata = [0,0,0,0,0,0,0];
-                    var labels = ["January", "February", "March", "April", "May", "June", "July"]
-
-
-                return  update(state, {
+            case 'UPDATE_WEIGHT' :
+                console.log ("inside update weight: " + action.weight);
+                return update(state, {
                     radar: {
                         datasets: {
-                            0: {
-                                data: {$set: radardata }
+                            1: {
+                                data: {$set: action.weight}
                             }
                         }
-                    }
-                })
+                    },
+                    bar: {
+                        datasets: {
+                            0: {
+                                data: {$set: action.weight}
+                            }
 
+                        }
+                    }
+
+                });
+            
             default:
                 return state;
 

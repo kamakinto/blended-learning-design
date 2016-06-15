@@ -7,21 +7,16 @@ const Home  = React.createClass({
 
     checkClick(e) {
         var checkbox = document.getElementById(e.target.id);
-            if(checkbox.checked) {
-                //fire off an action for checked boxes
-                console.log("checkbox is checked");
-                const boxValue = checkbox.value;
-                this.props.addChartValues(boxValue)
-                
-                
-            } else {
-                //fire off an action for unchecked boxes
-                console.log("checkbox is unchecked");
-                
-                
-            }
 
-                console.log(checkbox.checked);
+                
+                const boxValue = {
+                    value: checkbox.value,
+                    checked: checkbox.checked
+                }
+                
+                this.props.updateChartValues(boxValue, this.props)
+                
+
     },
 
 
@@ -39,7 +34,7 @@ const Home  = React.createClass({
                 <form>
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" value="journal" onClick={this.props.updateRadar.bind(null, this.props.charts)}> Journals </input>
+                            <input id="journal" type="checkbox" value="journal" onClick={this.checkClick}> Journals </input>
                         </label>
                     </div>
 
