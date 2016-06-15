@@ -1,18 +1,33 @@
 import React from "react";
 import SpiderGraph from '../elements/SpiderGraph';
 
+
+
 const Home  = React.createClass({
 
-    componentWillReceiveProps: function(nextProps) {
-        console.log(nextProps);
-       this.setState({charts: nextProps.charts});
+    checkClick(e) {
+        var checkbox = document.getElementById(e.target.id);
+            if(checkbox.checked) {
+                //fire off an action for checked boxes
+                console.log("checkbox is checked");
+                const boxValue = checkbox.value;
+                this.props.addChartValues(boxValue)
+                
+                
+            } else {
+                //fire off an action for unchecked boxes
+                console.log("checkbox is unchecked");
+                
+                
+            }
 
-
+                console.log(checkbox.checked);
     },
 
-    render() {
 
-        return (
+
+ render() {
+    return (
             <div>
 
                 <div>
@@ -30,13 +45,13 @@ const Home  = React.createClass({
 
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" value="blogs"> Blogs </input>
+                            <input id="blog" type="checkbox" ref="blogs" onClick={this.checkClick} value="blogs"> Blogs </input>
                         </label>
                     </div>
 
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" value="discussion board"> Discussion Board </input>
+                            <input id="Discussion-Board" type="checkbox" value="discussion board" onClick={this.checkClick}> Discussion Board </input>
                         </label>
                     </div>
                 </form>

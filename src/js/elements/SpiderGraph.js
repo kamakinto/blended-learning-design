@@ -9,12 +9,7 @@ var BarChart = require("react-chartjs").Bar;
 
 
 const SpiderGraph = React.createClass({
-
-    componentWillReceiveProps: function(nextProps) {
-        console.log(nextProps);
-
-    },
-
+    
     render() {
 
 
@@ -23,7 +18,7 @@ const SpiderGraph = React.createClass({
                 <div className="row">
                     <div className="col-md-6">
 
-                            <RadarChart data={this.props.charts.radar} options={null}  width="300" height="250" />
+                            <RadarChart data={this.props.charts.radar} redraw options={null}  width="300" height="250" />
                         </div>
 
 
