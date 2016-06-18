@@ -23,19 +23,15 @@ const SpiderGraph = React.createClass({
 
 
                         <div className="col-md-6">
-                            <BarChart data={this.props.charts.bar} options={null}  width="300" height="250" />
+                            <BarChart data={this.props.charts.bar} options={this.props.charts.chartOptions}  width="300" height="250" />
                         </div>
                     </div>
-                 <pre>
-                    {JSON.stringify(this.props.charts.radar)}
-                     </pre>
+                 
                 </div>
 
         )
 
     }
-
-
 
 
 });

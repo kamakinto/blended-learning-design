@@ -19,7 +19,7 @@ function charts(state = [], action) {
 
         switch(action.type) {
             case 'UPDATE_WEIGHT' :
-                console.log ("inside update weight: " + action.weight);
+                
                 return update(state, {
                     radar: {
                         datasets: {
