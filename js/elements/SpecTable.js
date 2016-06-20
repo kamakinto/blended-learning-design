@@ -30,12 +30,12 @@ render() {
                             </thead>
                             <tbody>
                             <tr>
-                                <td> {this.props.charts.radar.datasets[1].data[0]}%</td>
-                                <td> {this.props.charts.radar.datasets[1].data[1]}%</td>
-                                <td> {this.props.charts.radar.datasets[1].data[2]}%</td>
-                                <td> {this.props.charts.radar.datasets[1].data[3]}%</td>
-                                <td> {this.props.charts.radar.datasets[1].data[4]}%</td>
-                                <td> {this.props.charts.radar.datasets[1].data[5]}%</td>
+                                <td> {this.props.charts.radar.datasets[1].data[0]}pts</td>
+                                <td> {this.props.charts.radar.datasets[1].data[1]}pts</td>
+                                <td> {this.props.charts.radar.datasets[1].data[2]}pts</td>
+                                <td> {this.props.charts.radar.datasets[1].data[3]}pts</td>
+                                <td> {this.props.charts.radar.datasets[1].data[4]}pts</td>
+                                <td> {this.props.charts.radar.datasets[1].data[5]}pts</td>
 
 
 

@@ -48,15 +48,15 @@ const charts = {
     },
 
     weights: {
-        journal: [10,10,10,10,10,10],
-        blog:[30,30,30,30,30,30],
-        discussion_board:[60,60,60,60,60,60],
-        group_work:[60,60,60,60,60,60],
-        post_online_resources:[5,25,30,12,4,20],
-        minute_papers:[6,34,44,26,6,10],
-        peer_observation_feedback:[20,2,40,17,33,5],
-        direct_instruction: [66,42,31,34,9,26],
-        in_class_quizzes:[40,19,28,23,19,6]
+        journal: [30,5,5,35,15,10],
+        blog:[35,10,0,35,10,10],
+        discussion_board:[35,15,0,35,10,5],
+        group_work:[0,35,35,5,20,5],
+        post_online_resources:[35,10,10,20,10,15],
+        minute_papers:[5,5,20,10,1,40],
+        peer_observation_feedback:[5,25,10,10,10,40],
+        direct_instruction: [0,15,40,5,25,15],
+        in_class_quizzes:[0,0,40,5,10,45]
     }
 
 
