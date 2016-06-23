@@ -1,6 +1,7 @@
 import React from "react";
 import SpiderGraph from '../elements/SpiderGraph';
 import SpecTable from '../elements/SpecTable';
+import ToolInfo from '../elements/ToolInfo';
 
 
 
@@ -14,6 +15,14 @@ const Home  = React.createClass({
                 }
                 
                 this.props.updateChartValues(boxValue, this.props)
+        var infoSection = document.getElementById(e.target.id + "Info");
+
+        if(checkbox.checked) {
+            infoSection.style.display = "block";
+        } else {
+            infoSection.style.display = "none";
+        }
+
      },
 
 
@@ -48,7 +57,7 @@ const Home  = React.createClass({
 
                     <div class="checkbox">
                         <label>
-                            <input id="Discussion-Board" type="checkbox" value="discussion board" onClick={this.checkClick}> Discussion Board </input>
+                            <input id="discussion-board" type="checkbox" value="discussion board" onClick={this.checkClick}> Discussion Board </input>
                         </label>
                     </div>
                 </form>
@@ -59,13 +68,13 @@ const Home  = React.createClass({
                 <form>
                     <div class="checkbox">
                         <label>
-                            <input id="group work" type="checkbox" value="Group Work" onClick={this.checkClick}> Group Work </input>
+                            <input id="group-work" type="checkbox" value="Group Work" onClick={this.checkClick}> Group Work </input>
                         </label>
                     </div>
 
                     <div class="checkbox">
                         <label>
-                            <input id="Post Online Resources" type="checkbox" ref="Post Online Resources" onClick={this.checkClick} value="Post Online Resources"> Post Online Resources </input>
+                            <input id="post-online-resources" type="checkbox" ref="Post Online Resources" onClick={this.checkClick} value="Post Online Resources"> Post Online Resources </input>
                         </label>
                     </div>
 
@@ -97,6 +106,11 @@ const Home  = React.createClass({
                             </label>
                         </div>
                     </form>
+                </div>
+
+                <div class="row">
+                    <ToolInfo />
+
                 </div>
 
                 </div>

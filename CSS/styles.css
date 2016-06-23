@@ -1,0 +1,14 @@
+.info-paragraph {
+    color: #303030;
+    display: none;
+
+}
+
+.table-borderless tbody tr td, .borderless tbody tr th, .borderless thead tr th {
+    border: none !important;
+}
+
+.row-custom {
+    padding-top: 30px;
+
+}
